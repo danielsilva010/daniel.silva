@@ -6,13 +6,17 @@
     <title>Survey Form</title>
   </head>
   <body>
+    <section>
     <h1 id='title'>Tech Survey Form</h1>
     <p id='description'>Thank you for your interest in taking our survey.</p>
+  </section>
     <form id='survey-form'>
+      <section>
       <label id='name-label' for='name'>Name<input placeholder='Enter Name' type='text' id='name' required></label>
       <label id='email-label' for='email'>Email<input placeholder='Enter Email' type='email' id='email' required pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$''></label>
       <label id='number-label' for='number'>Age<input id='number' placeholder='Enter Age'type='number' max='120' min='12' required></label>
       <input type='submit'>
+    </section><section>
       <label>What option best describes your current role?
         <select id='dropdown'>
         <option></option>
@@ -23,18 +27,22 @@
         <option>Entrepreneur</option>
         <option>Prefer not to disclose</option>
       </select>
+    </section><section>
       <p class="p">How much do you love CS?</p>
         <label>
           <input type='radio' name='cslove-cshate' value='binary'> I breathe binary.
         </label>
         <label><input value='idk' type='radio' name='cslove-cshate'>IDK man i'm lost...</label>
-        <label><input value='money' type='radio' name='cslove-cshate'>I'm in it for the money</label>
+        <label><input value='money' type='radio' name='cslove-cshate'>I'm in it for the money</label></section>
+        <section>
         <p class="p">What are your favorite type of projects? (check all that apply)</p>
         <label><input type='checkbox' value='front-end'> Front-end projects</label>
         <label> <input type='checkbox' value='back-end'> Back-end projects</label>
         <label><input type='checkbox' value='fullstack'>Full stack</label>
+      </section><section></section>
         <p class="p">Comments or anecdotes?</p>
         <textarea placeholder='Enter comments here'></textarea>
+      </section>
         <input type='submit' id='submit'>
     </form>
   </body>
