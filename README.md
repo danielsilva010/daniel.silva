@@ -1,1 +1,3 @@
 # danielsilva010.github.io
+this is literally just me experimenting with html code...
+for thoughts or suggestions --> danielsilvaperez24@gmail.com
