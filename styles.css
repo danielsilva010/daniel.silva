@@ -1,5 +1,7 @@
 h1, p, input, select, option, textarea {
     text-align: center;
     display: block;
-    color: aliceblue;
+}
+body {
+    background-color: magenta;
 }
