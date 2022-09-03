@@ -17,8 +17,8 @@
       <label id='number-label' for='number'>Age<input id='number' placeholder='Enter Age'type='number' max='120' min='12' required></label>
       <input type='submit'>
     </section><section>
-      <label>What option best describes your current role?
-        <select id='dropdown'>
+      <label for="dropdown">What option best describes your current role?
+        <select name='dropdown' id='dropdown'>
         <option></option>
         <option>Full Time</option>
         <option>Part Time</option>
@@ -29,16 +29,16 @@
       </select>
     </section><section>
       <p class="p">How much do you love CS?</p>
-        <label>
+        <label for="cslove-cshate">
           <input type='radio' name='cslove-cshate' value='binary'> I breathe binary.
         </label>
-        <label><input value='idk' type='radio' name='cslove-cshate'>IDK man i'm lost...</label>
-        <input value='money' type='radio' name='cslove-cshate'><label>I'm in it for the money</label></section>
+        <label for="cslove-cshate"><input value='idk' type='radio' name='cslove-cshate'>IDK man i'm lost...</label>
+        <label for="cslove-cshate"></label><input value='money' type='radio' name='cslove-cshate'>I'm in it for the money</label></section>
         <section>
         <p class="p">What are your favorite type of projects? (check all that apply)</p>
-        <label><input type='checkbox' value='front-end'> Front-end projects</label>
-        <label> <input type='checkbox' value='back-end'> Back-end projects</label>
-        <label><input type='checkbox' value='fullstack'>Full stack</label>
+        <label for="front-end"><input type='checkbox' name='front-end' value='front-end'> Front-end projects</label>
+        <label for="back-end"> <input type='checkbox' name='back-end' value='back-end'> Back-end projects</label>
+        <label for="fullstack"><input type='checkbox' name='fullstack' value='fullstack'>Full stack</label>
       </section><section></section>
         <p class="p">Comments or anecdotes?</p>
         <textarea placeholder='Enter comments here'></textarea>
