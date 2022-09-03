@@ -1,7 +1,11 @@
 .p {
     text-align: center;
     color: black;
+    display: block;
 }
 body {
     color: black;
+}
+section {
+    display: block;
 }
