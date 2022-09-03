@@ -6,7 +6,7 @@ p {
 body {
     color: black;
 }
-section {
+section, input {
     text-align: center;
     display: block;
 }
