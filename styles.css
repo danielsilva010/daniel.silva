@@ -6,10 +6,13 @@ p {
 body {
     color: black;
 }
-section, input {
+section {
     text-align: center;
     display: block;
 }
 h1 {
     text-align: center; 
+}
+input, label {
+    display: block;
 }
