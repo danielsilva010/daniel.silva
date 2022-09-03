@@ -1,7 +1,8 @@
-body {
-    color:aliceblue
-}
 h1, p, input {
     text-align: center;
     display: block;
+    color: aliceblue;
+}
+body {
+ opacity: 50%;
 }
