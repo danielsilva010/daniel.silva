@@ -7,16 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <title>Nutri Sea Moss - Landing Page</title>
     <style>
-  .moving-animation {
-    position: fixed;
-    width: 50px;
-    height: 50px;
-    background-color: #32a852;
-    border-radius: 50%;
-  }
-</style>
-
-    <style>
       /* Basic CSS Reset */
       * {
         margin: 0;
@@ -110,36 +100,5 @@
       <p>Phone: (305) 988-5632</p>
       <a href="contactme.html" class="cta-button">Contact Us</a>
     </div>
-    <div class="moving-animation" id="moving-animation"></div>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const animationElement = document.getElementById('moving-animation');
-    let xPos = 0;
-    let yPos = 0;
-    let xSpeed = 2;
-    let ySpeed = 2;
-
-    function moveAnimation() {
-      xPos += xSpeed;
-      yPos += ySpeed;
-
-      if (xPos > window.innerWidth - 50 || xPos < 0) {
-        xSpeed = -xSpeed;
-      }
-
-      if (yPos > window.innerHeight - 50 || yPos < 0) {
-        ySpeed = -ySpeed;
-      }
-
-      animationElement.style.left = xPos + 'px';
-      animationElement.style.top = yPos + 'px';
-
-      requestAnimationFrame(moveAnimation);
-    }
-
-    moveAnimation();
-  });
-</script>
-
   </body>
 </html>
