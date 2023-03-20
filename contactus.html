@@ -1,26 +1,151 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Contact Form Example</title>
-    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
-  </head>
-  <body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+  <title>Contact Us - Nutri Sea Moss</title>
+  <style>
+    /* Basic reset styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.6;
+      background-color: #f2f2f2;
+      background-image: url('Assets/blackbackground.jpg');
+      padding: 40px 0;
+    }
+
+    h1, h2 {
+      margin-bottom: 20px;
+      color: #333;
+      font-family: 'Lora', serif;
+    }
+
+    /* Contact form styles */
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 40px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form input[type="email"],
+    .contact-form input[type="text"],
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: none;
+      background-color: #f2f2f2;
+      color: #444;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    .contact-form input[type="email"]:focus,
+    .contact-form input[type="text"]:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      box-shadow: 0px 0px 2px #32a852;
+    }
+
+    .contact-form input[type="email"]::placeholder,
+    .contact-form input[type="text"]::placeholder,
+    .contact-form textarea::placeholder {
+      color: #999;
+      font-style: italic;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+
+    .contact-form .pageclip-form__submit {
+      display: block;
+      text-decoration: none;
+      background-color: #32a852;
+      color: #fff;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin-top: 20px;
+      border: none;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    .contact-form .pageclip-form__submit:hover {
+      background-color: #289b47;
+      cursor: pointer;
+    }
+
+    .contact-form .pageclip-form__submit span {
+      position: relative;
+    }
+
+    .contact-form .pageclip-form__submit span: before {
+    }
+    .contact-form .pageclip-form__submit span:after {
+content: '';
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 20px;
+height: 20px;
+border-radius: 50%;
+border: 2px solid transparent;
+border-top-color: #fff;
+border-left-color: #fff;
+animation: pageclip-loading-spinner 0.6s linear infinite;
+opacity: 0;
+transition: opacity 0.2s ease-in-out;
+}
+      .contact-form .pageclip-form__submit.loading span {
+    opacity: 0;
+  }
+
+  .contact-form .pageclip-form__submit.loading span:after {
+    opacity: 1;
+  }
+
+  @keyframes pageclip-loading-spinner {
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="contact-form">
     <h1>Contact Us</h1>
     <form action="https://send.pageclip.co/lIMFjGXAJaq10L1ptD2RGWdwiCLYF7SV/ContactForm" class="pageclip-form" method="post">
-      <label for="name">Name:</label>
-      <input type="text" name="name" id="name" required>
-      <br>
-      <label for="email">Email:</label>
-      <input type="email" name="email" id="email" required>
-      <br>
-      <label for="message">Message:</label>
-      <textarea name="message" id="message" rows="5" required></textarea>
-      <br>
-      <button type="submit" class="pageclip-form__submit">
-        <span>Send</span>
-      </button>
-    </form>
-    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
-  </body>
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" placeholder="Enter your name">
+        <label for="email">Email</label>
+  <input type="email" name="email" id="email" placeholder="Enter your email">
+
+  <label for="message">Message</label>
+  <textarea name="message" id="message" placeholder="Enter your message"></textarea>
+
+  <button type="submit" class="pageclip-form__submit">
+    <span>Send</span>
+  </button>
+</form>
+ </div>
+  <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+</body>
 </html>
