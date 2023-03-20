@@ -100,5 +100,36 @@
       <p>Phone: (305) 988-5632</p>
       <a href="contactme.html" class="cta-button">Contact Us</a>
     </div>
+    <div class="moving-animation" id="moving-animation"></div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const animationElement = document.getElementById('moving-animation');
+    let xPos = 0;
+    let yPos = 0;
+    let xSpeed = 2;
+    let ySpeed = 2;
+
+    function moveAnimation() {
+      xPos += xSpeed;
+      yPos += ySpeed;
+
+      if (xPos > window.innerWidth - 50 || xPos < 0) {
+        xSpeed = -xSpeed;
+      }
+
+      if (yPos > window.innerHeight - 50 || yPos < 0) {
+        ySpeed = -ySpeed;
+      }
+
+      animationElement.style.left = xPos + 'px';
+      animationElement.style.top = yPos + 'px';
+
+      requestAnimationFrame(moveAnimation);
+    }
+
+    moveAnimation();
+  });
+</script>
+
   </body>
 </html>
