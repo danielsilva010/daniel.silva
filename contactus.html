@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-1t2vSYsxcCECtA45kN+/RJzeyMgKL/JfxXCH2xWoUHmpW8Zv3gZmLPzpmHqwpyw8zMCWtFvjt60T9Xt70cnCUQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" type="image/x-icon" href="Assets/you!.ico">
@@ -9,8 +10,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
   <title>Contact Us - Nutri Sea Moss</title>
-  <style>
-    /* Basic reset styles */
+  <style>.home-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: #32a852;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+}
+
+.home-button i {
+  font-size: 24px;
+}
+
     * {
       margin: 0;
       padding: 0;
@@ -131,6 +148,9 @@ transition: opacity 0.2s ease-in-out;
 </style>
 </head>
 <body>
+  <div class="home-button">
+  <a href="index.html"><i class="fas fa-home"></i></a>
+</div>
   <div class="contact-form">
     <h1>Contact Us</h1>
     <form action="https://send.pageclip.co/lIMFjGXAJaq10L1ptD2RGWdwiCLYF7SV/ContactForm" class="pageclip-form" method="post">
