@@ -140,6 +140,10 @@ margin-right: -30px;
 background-color: #aaa;
 }
 
+.es-lang-button {
+float: right;
+}
+
 .en-lang-btn {
 background-image: url('Assets/usflag.jpeg');
 background-size: cover;
@@ -152,6 +156,10 @@ margin-right: -30px;
 
 .en-lang-btn:hover {
 background-color: #aaa;
+}
+
+.en-lang-button {
+ float: right;
 }
 
 .discover {
