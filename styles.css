@@ -108,25 +108,7 @@ float: left;
   float: right;
   display: inline-block;
   padding: 5px;
-  background-image: url("Assets/spanish.jpg");
-  content: url("Assets/spanish.jpg");
-  background-size: cover;
-  border-radius: 50%;
-  width: 300px;
-  height: 300px;
-  margin-top: -30px;
-  margin-right: -30px;
-}
-.es-lang-btn:hover {
-    background-color: #aaa;
-  }
-
-.en-lang-btn {
-  float: right;
-  display: inline-block;
-  padding: 5px;
-  background-image: url('Assets/usflag.jpeg');
-  content: url('Assets/usflag.jpeg');
+  background-image: url('Assets/spanish.jpg');
   background-size: cover;
   border-radius: 50%;
   width: 30px;
@@ -134,9 +116,31 @@ float: left;
   margin-top: -30px;
   margin-right: -30px;
 }
-.en-lang-btn:hover {
+  .es-lang-btn:hover {
     background-color: #aaa;
   }
+.es-lang-btn {
+    float: right;
+}
+
+.en-lang-btn {
+  float: right;
+  display: inline-block;
+  padding: 5px;
+  background-image: url('Assets/usflag.jpeg');
+  background-size: cover;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-top: -30px;
+  margin-right: -30px;
+}
+  .en-lang-btn:hover {
+    background-color: #aaa;
+  }
+.en-lang-btn {
+    float: right;
+}
 
 .discover {
  padding-left: 30px;
