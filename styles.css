@@ -127,6 +127,7 @@ float: left;
 }
 
 .es-lang-btn {
+position: absolute;
 background-image: url('Assets/icon-flag-spain-round-glossy-vector-illustration-eps-button-badge-193853545.jpg');
 background-size: cover;
 border-radius: 50%;
