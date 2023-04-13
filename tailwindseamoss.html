@@ -11,6 +11,19 @@
   <header class="bg-green-500 text-white py-4">
     <div class="container mx-auto flex justify-between items-center">
       <h1 class="text-2xl font-bold">Nutri Sea Moss</h1>
+      <nav>
+        <ul class="hidden md:flex space-x-4">
+          <li><a href="#home" class="hover:underline">Home</a></li>
+          <li><a href="#products" class="hover:underline">Products</a></li>
+          <li><a href="#about" class="hover:underline">About Us</a></li>
+          <li><a href="#contact" class="hover:underline">Contact</a></li>
+        </ul>
+        <button id="nav-toggle" class="md:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M3 6h14v2H3V6zm0 5h14v2H3v-2zm0 5h14v2H3v-2z" clip-rule="evenodd" />
+          </svg>
+        </button>
+      </nav>
     </div>
   </header>
   <section id="home" class="bg-white py-20">
@@ -30,17 +43,10 @@
           <h3 class="text-xl font-bold mb-2">Sea Moss Gel</h3>
           <p class="text-gray-700 mb-4">Our premium sea moss gel is perfect for smoothies, teas, and more.</p>
           <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Add to Cart</button>
-        </div>
-        <!-- Product 2 -->
-        <div class="bg-white rounded shadow p-4">
-          <img src="path/to/sea-moss-capsules.jpg" alt="Sea Moss Capsules" class="w-full h-48 object-cover mb-4">
-          <h3 class="text-xl font-bold mb-2">Sea Moss Capsules</h3>
-          <p class="text-gray-700 mb-4">Convenient sea moss capsules for daily use.</p>
-          <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Add to Cart</button>
-        </div>
-        <!-- Product 3 -->
-        <div class="bg-white rounded shadow p-4">
-          <img src="path/to/sea-moss-powder.jpg" alt="Sea Moss Powder" class="w-full h-48 object-cover mb-4">
+</div>
+<!-- Product 3 -->
+<div class="bg-white rounded shadow p-4">
+<img src="path/to/sea-moss-powder.jpg" alt="Sea Moss Powder" class="w-full h-48 object-cover mb-4">
 <h3 class="text-xl font-bold mb-2">Sea Moss Powder</h3>
 <p class="text-gray-700 mb-4">Versatile sea moss powder for easy incorporation into your favorite recipes.</p>
 <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Add to Cart</button>
@@ -89,19 +95,26 @@
     </div>
   </footer>
   <script>
-  // Create a navbar with links
-  const navbar = document.createElement('nav');
-  navbar.innerHTML = `
-    <ul class="flex space-x-4">
-      <li><a href="#home" class="hover:underline">Home</a></li>
-      <li><a href="#products" class="hover:underline">Products</a></li>
-      <li><a href="#about" class="hover:underline">About Us</a></li>
-      <li><a href="#contact" class="hover:underline">Contact</a></li>
-    </ul>
-  `;
-  // Add the navbar to the header element
-  const header = document.querySelector('header');
-  header.appendChild(navbar);
+    // Create a navbar with links
+    const navbar = document.createElement('nav');
+    navbar.innerHTML = `
+      <ul class="hidden md:flex space-x-4">
+    <li><a href="#home" class="hover:underline">Home</a></li>
+    <li><a href="#products" class="hover:underline">Products</a></li>
+    <li><a href="#about" class="hover:underline">About Us</a></li>
+    <li><a href="#contact" class="hover:underline">Contact</a></li>
+  </ul>
+`;
+// Append the navbar to the header
+const header = document.querySelector('header');
+header.appendChild(navbar);
+
+// Toggle the navbar when the nav-toggle button is clicked
+const navToggle = document.getElementById('nav-toggle');
+navToggle.addEventListener('click', () => {
+navbar.classList.toggle('hidden');
+});
 </script>
+
 </body>
 </html>
