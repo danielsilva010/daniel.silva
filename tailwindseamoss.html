@@ -22,7 +22,7 @@
   <header class="bg-green-500 text-white py-4">
     <div class="container mx-auto flex justify-between items-center">
       <h1 class="text-2xl font-bold">Nutri Sea Moss</h1>
-      <button id="nav-toggle" class="block md:hidden">
+      <button id="nav-hamburger-menu" class="block md:hidden">
         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
@@ -111,10 +111,21 @@
     </div>
   </footer>
   <script>
-  $(document).ready(function () {
-  $("#nav-toggle").click(function () {
-    $("#nav-menu").toggleClass("block md:flex").toggleClass("hidden");
-  });
+  $(document).ready(function() {
+  var hmenu = $("#nav-hamburger-menu");
+  hmenu.attr("href", "javascript:void(0)");
+
+  window.navHamburgerMetricLogger = function() {
+    if (window.ue && window.ue.count) {
+      var metricName = "Nav:Hmenu:IconClickActionPending";
+      window.ue.count(metricName, (ue.count(metricName) || 0) + 1);
+    }
+    window.$Nav && $Nav.declare("navHMenuIconClicked", true);
+    window.$Nav && $Nav.declare("navHMenuIconClickedNotReadyTimeStamp", Date.now());
+  };
+
+  hmenu.on("click", window.navHamburgerMetricLogger);
+  window.$Nav && $Nav.declare('hamburgerMenuIconAvailableOnLoad', false);
 });
   </script>
 </body>
