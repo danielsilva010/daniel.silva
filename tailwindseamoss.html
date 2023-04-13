@@ -99,12 +99,10 @@
       <p>&copy; 2023 Nutri Sea Moss. All rights reserved.</p>
     </div>
   </footer>
-  <script>
   $(document).ready(function () {
-    $("#nav-toggle").click(function () {
-      $("#nav-menu").toggleClass("hidden");
-    });
+  $("#nav-toggle").click(function () {
+    $("#nav-menu").toggleClass("block md:flex").toggleClass("hidden");
   });
-</script>
+});
 </body>
 </html>
