@@ -1,4 +1,8 @@
 import './style.css';
+import './moon.jpg';
+import './danny.jpg';
+import './space.jpg';
+import './normal.jpg';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
