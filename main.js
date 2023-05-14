@@ -1,8 +1,4 @@
 import './style.css';
-import './moon.jpg';
-import './danny.jpg';
-import './space.jpg';
-import './normal.jpg';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
@@ -60,7 +56,7 @@ function addStar() {
   scene.add(star);
 }
 
-Array(200).fill().forEach(addStar);
+Array(400).fill().forEach(addStar);
 
 // Background
 
@@ -69,7 +65,7 @@ scene.background = spaceTexture;
 
 // Avatar
 
-const jeffTexture = new THREE.TextureLoader().load('https://github.com/danielsilva010/daniel.silva/blob/1ce955ca7f9330de9ec79c6e62f97b09ef556a60/danny.jpg');
+const jeffTexture = new THREE.TextureLoader().load('danny.jpg');
 
 const jeff = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: jeffTexture }));
 
