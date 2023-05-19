@@ -60,7 +60,7 @@ Array(350).fill().forEach(addStar);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load('./static/images/space.jpg');
+const spaceTexture = new THREE.TextureLoader().load('./static/images/aurora.jpeg');
 scene.background = spaceTexture;
 
 // Avatar
