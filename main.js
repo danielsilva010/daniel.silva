@@ -56,7 +56,7 @@ function addStar() {
   scene.add(star);
 }
 
-Array(350).fill().forEach(addStar);
+Array(50).fill().forEach(addStar);
 
 // Background
 
@@ -70,24 +70,6 @@ const jeffTexture = new THREE.TextureLoader().load('./static/images/danny.jpg');
 const jeff = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: jeffTexture }));
 
 scene.add(jeff);
-
-// Moon
-
-const moonTexture = new THREE.TextureLoader().load('./static/images/moon.jpg');
-const normalTexture = new THREE.TextureLoader().load('./static/images/normal.jpg');
-
-const moon = new THREE.Mesh(
-  new THREE.SphereGeometry(3, 32, 32),
-  new THREE.MeshStandardMaterial({
-    map: moonTexture,
-    normalMap: normalTexture,
-  })
-);
-
-scene.add(moon);
-
-moon.position.z = 30;
-moon.position.setX(-10);
 
 jeff.position.z = -5;
 jeff.position.x = 2;
@@ -120,9 +102,6 @@ function animate() {
   torus.rotation.y += 0.005;
   torus.rotation.z += 0.01;
 
-  moon.rotation.x += 0.005;
-
-  // controls.update();
 
   renderer.render(scene, camera);
 }
